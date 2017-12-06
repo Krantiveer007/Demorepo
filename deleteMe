@@ -1,0 +1,14 @@
+git remote set-url origin git@github.com:username/repo.git
+
+
+#Create public key(id_rsa.pub) and its identification (id_rsa)
+ssh-keygen -t rsa -b 4096 -C "vibhumbhardwaj@hotmail.com"
+
+#Add created key to ssh-agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+#Copy public key from the file
+cat ~/.ssh/id_rsa.pub
+
+#Now login to browser and add copied public key there. 
